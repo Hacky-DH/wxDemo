@@ -1,0 +1,4 @@
+<!--pages/about/about.wxml-->
+<view class="main">
+<text>第一个小程序</text>
+</view>
