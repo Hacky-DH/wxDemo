@@ -4,7 +4,8 @@
     "pages/about/about"
   ],
   "window": {
-    "navigationBarTitleText": "Demo"
+    "navigationBarTitleText": "Demo",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [
@@ -22,6 +23,6 @@
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": false,
+  "debug": true,
   "sitemapLocation": "sitemap.json"
 }
