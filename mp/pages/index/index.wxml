@@ -1,10 +1,10 @@
 <view class="main" style="background-color:{{color}};">
 <button bindtap="countClick">欢迎</button>
 <text>点击次数{{count}}</text>
-<text>2020年大事记</text>
-<text>新型冠状病毒感染肺炎在武汉爆发，逐渐传遍全国。</text>
-<text>截止2020年1月31日12点全国确诊人数9720人，</text>
-<text>疑似15238人，死亡213人，治愈178人。</text>
-<text>大部分互联网公司由于疫情延迟到正月十七上班。</text>
-<text>科比飞机失事，突然去世。</text>
+<view class="header">2020年大事记</view>
+<view class="news">
+<view class="item" wx:for="{{news}}">
+  {{index+1}}: {{item}}
+</view>
+</view>
 </view>
