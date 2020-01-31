@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/toc/toc",
     "pages/about/about"
   ],
   "window": {
@@ -12,6 +13,10 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/toc/toc",
+        "text": "文章"
       },
       {
         "pagePath": "pages/about/about",
