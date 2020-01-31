@@ -1,0 +1,7 @@
+textarea {
+  background-color: white;
+  margin: 20rpx 0;
+}
+.btns {
+  display: flex;
+}

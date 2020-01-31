@@ -8,6 +8,18 @@ Page({
 
   },
 
+  feedback: function(e){
+    var text = e.detail.value.feedtext;
+    console.info(text);
+    if (text.length > 0) {
+      wx.showToast({
+        title: '反馈成功',
+        icon: 'success',
+        duration: 2000
+      });
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

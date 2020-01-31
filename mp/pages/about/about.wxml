@@ -1,4 +1,12 @@
 <!--pages/about/about.wxml-->
 <view class="main">
 <text>第一个小程序</text>
+<form bindsubmit="feedback" style="margin-top:100rpx">
+<text>意见反馈</text>
+<textarea name='feedtext'></textarea>
+<view class="btns">
+<button form-type="submit">提交</button>
+<button form-type="reset">重填</button>
+</view>
+</form>
 </view>
