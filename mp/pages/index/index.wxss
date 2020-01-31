@@ -1,0 +1,9 @@
+button {
+  text-align:center;
+  line-height:100%;
+  padding:10rpx 30rpx;
+  font-size: 20px;
+}
+text {
+  margin: 10rpx;
+}

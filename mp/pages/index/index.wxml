@@ -1,4 +1,8 @@
-<view class="main">
-<text>点击次数{{count}}</text>
+<view class="main" style="background-color:{{color}};">
 <button bindtap="countClick">欢迎</button>
+<text>点击次数{{count}}</text>
+<text>2020年大事记</text>
+<text>新型冠型肺炎在武汉爆发，逐渐传遍全国。</text>
+<text>大部分互联网公司由于疫情延迟到正月十七上班。</text>
+<text>科比飞机失事，突然去世。</text>
 </view>

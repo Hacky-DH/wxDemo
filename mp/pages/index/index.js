@@ -4,14 +4,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-		count:0
-	},
-	
-	countClick : function() {
-		this.setData({
-			count: this.data.count + 1
-		});
-	},
+    count: 0,
+    color: 'lightgray',
+  },
+  
+  colors: ['#1B9AF7', '#A5DE37', '#FEAE1B', '#FF4351', '#7B72E9', 'lightgray'],
+
+  countClick : function() {
+    this.setData({
+      count: this.data.count + 1,
+      color: this.colors[this.data.count % this.colors.length]
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载
