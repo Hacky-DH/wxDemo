@@ -24,6 +24,12 @@ Page({
       desc:'生活点滴',
       opentype:'switchTab'
     },
+    {
+      url:'/pages/secondgame/secondgame',
+      title:'一秒钟游戏',
+      desc:'你知道一秒钟有多长吗？',
+      opentype:'navigate'
+    },
   ]
   },
 

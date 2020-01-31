@@ -1,0 +1,12 @@
+.result {
+  text-align: center;
+  background-color: #8b572a;
+  padding: 4rpx;
+  border-radius: 5rpx;
+  width: 90%;
+  height: 3rem;
+}
+.btn {
+  text-align: center;
+  margin: 100rpx 0;
+}

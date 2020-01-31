@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/toc/toc",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/secondgame/secondgame"
   ],
   "window": {
     "navigationBarTitleText": "Demo",
