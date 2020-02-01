@@ -23,6 +23,10 @@ var plane = {
   },
   clear: function() {
     context.clearRect(this.x, this.y, image.src.width, image.src.height);
+  },
+  reset: function() {
+    this.x = canvas.width / 2 - 50;
+    this.y = 500;
   }
 }
 
@@ -33,17 +37,28 @@ function drawText(text, x, y) {
   context.restore();
 }
 
+var ani;
+const NOTSTART = 0;
+const INGAME = 1;
+const GAMEOVER = 2;
+var stat = NOTSTART;
+
 function drawLoop() {
+  if (stat == NOTSTART) {
+    stat = INGAME;
+  }
   context.save();
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillStyle = "blue";
   context.fillRect(0, 0, canvas.width, canvas.height);
   context.restore();
   drawText('飞机小游戏', canvas.width/2-30, 20);
+  drawText('手指触摸进行移动飞机', canvas.width/2-100, 45);
+  plane.clear();
   plane.draw();
   rect.draw();
   rect.y++;
-  if(rect.y > canvas.height){
+  if(rect.y > canvas.height) {
     rect.y = 30;
   }
   if (plane.x >= rect.x - 100 && plane.x <= rect.x + 100
@@ -52,15 +67,25 @@ function drawLoop() {
       title: '提示',
       content: '发生碰撞，游戏结束！'
     });
-  } else {
-    requestAnimationFrame(drawLoop);
+    stat = GAMEOVER;
+    cancelAnimationFrame(ani);
+    return;
   }
+  ani = requestAnimationFrame(drawLoop);
 }
 
+wx.onTouchStart(function (e) {
+  if (stat == INGAME) {
+    return;
+  }
+  plane.x = e.changedTouches[0].clientX;
+  plane.y = e.changedTouches[0].clientY;
+  ani = requestAnimationFrame(drawLoop);
+})
+
 wx.onTouchMove(function (e) {
-  plane.clear();
   plane.x = e.changedTouches[0].clientX;
   plane.y = e.changedTouches[0].clientY;
 })
 
-requestAnimationFrame(drawLoop);
+ani = requestAnimationFrame(drawLoop);
